@@ -1,0 +1,1 @@
+-- Initial schema is intentionally empty. Each domain phase adds its own Flyway migration.
