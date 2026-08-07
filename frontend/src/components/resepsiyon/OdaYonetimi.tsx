@@ -44,7 +44,6 @@ export default function OdaYonetimi() {
     <div className="flex gap-5 h-full">
       {/* ── Sol: Grid ── */}
       <div className="flex-1 min-w-0">
-        {hata && <p className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{hata}</p>}
         {/* Başlık */}
         <div className="mb-4">
           <h1 className="text-3xl font-bold text-gray-800">Oda Yönetimi</h1>

@@ -100,7 +100,7 @@ export default function AnasayfaFooter() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
             <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
               <span style={{ color: 'var(--accent)', fontSize: '16px', marginTop: '2px' }}>📍</span>
-              <span style={{ color: 'rgba(187,247,208,0.7)', fontSize: '13.5px', lineHeight: 1.5 }}>OGM Misafirhane Tesisleri<br/>Aksu / Antalya</span>
+              <span style={{ color: 'rgba(187,247,208,0.7)', fontSize: '13.5px', lineHeight: 1.5 }}>OGM Misafirhane Tesisleri<br/>Çankaya / Ankara</span>
             </div>
             <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
               <span style={{ color: 'var(--accent)', fontSize: '16px' }}>📞</span>

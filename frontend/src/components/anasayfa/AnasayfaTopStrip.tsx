@@ -13,7 +13,7 @@ export default function AnasayfaTopStrip() {
       <div style={{ display: 'flex', alignItems: 'center', gap: '18px' }}>
         <span>Her gün 08:00–22:00 açığız</span>
         <div style={{ width: '1px', height: '12px', background: 'rgba(187,247,208,0.25)' }} />
-        <span>Aksu / Antalya</span>
+        <span>Çankaya / Ankara</span>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
         <span>0312 123 45 67</span>

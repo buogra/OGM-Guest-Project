@@ -13,7 +13,7 @@ export default function AnasayfaLocation() {
               <div style={{ fontSize: '46px' }}>📍</div>
               <div style={{ background: '#fff', borderRadius: '12px', padding: '14px 18px', boxShadow: '0 10px 30px rgba(15,42,15,0.15)', textAlign: 'left' }}>
                 <strong style={{ fontSize: '13.5px', display: 'block', marginBottom: '3px' }}>OGM Misafirhane</strong>
-                <span style={{ fontSize: '12px', color: '#6b7d6b' }}>Aksu / Antalya, Türkiye</span>
+                <span style={{ fontSize: '12px', color: '#6b7d6b' }}>Çankaya / Ankara, Türkiye</span>
               </div>
             </div>
           </div>
@@ -21,8 +21,8 @@ export default function AnasayfaLocation() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <span style={{ fontSize: '20px' }}>📍</span>
               <div>
-                <strong style={{ display: 'block', fontSize: '14px' }}>OGM Misafirhane, Aksu</strong>
-                <span style={{ fontSize: '12.5px', color: '#6b7d6b' }}>Antalya, Türkiye</span>
+                <strong style={{ display: 'block', fontSize: '14px' }}>OGM Misafirhane, Çankaya</strong>
+                <span style={{ fontSize: '12.5px', color: '#6b7d6b' }}>Ankara, Türkiye</span>
               </div>
             </div>
             <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" style={{

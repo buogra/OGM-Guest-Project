@@ -87,8 +87,7 @@ export default function RezervasyonYonetimi() {
   const bosOdalar = odalar.filter((o) => (o.manuelDurum ?? o.otomatikDurum) === "Boş");
 
   return (
-    <div className="relative">
-      {hata && <p className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{hata}</p>}
+    <div className="flex-1 min-w-0">
       {/* Başlık */}
       <div className="mb-6">
         <h1 className="text-3xl font-bold text-gray-800">Rezervasyon Yönetimi</h1>

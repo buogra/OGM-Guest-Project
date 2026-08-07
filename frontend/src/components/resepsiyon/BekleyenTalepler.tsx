@@ -25,7 +25,6 @@ export default function BekleyenTalepler() {
 
   return (
     <div>
-      {hata && <p className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{hata}</p>}
       {/* Başlık */}
       <div className="mb-6">
         <h1 className="text-3xl font-bold text-gray-800">Bekleyen Talepler</h1>

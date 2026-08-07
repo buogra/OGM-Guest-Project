@@ -4,12 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { signOut } from "next-auth/react";
 
 const navItems = [
   { href: "/oda-yonetimi",         label: "Oda Yönetimi",          icon: "pi pi-th-large" },
   { href: "/bekleyen-talepler",    label: "Bekleyen Talepler",     icon: "pi pi-bell" },
   { href: "/rezervasyon-yonetimi", label: "Rezervasyon Yönetimi",  icon: "pi pi-calendar" },
   { href: "/kullanici-yonetimi",   label: "Kullanıcı Yönetimi",    icon: "pi pi-users" },
+  { href: "/duyuru-yonetimi",      label: "Duyuru Yönetimi",       icon: "pi pi-megaphone" },
 ];
 
 const SIDEBAR_BG    = "#0f2a0f";
@@ -174,7 +176,7 @@ export default function ResepsiyonShell({ children }: { children: React.ReactNod
               </div>
               <span style={{ color: "#fff", fontSize: "14px", fontWeight: 500 }}>Hoş Geldiniz</span>
             </div>
-            <Link href="/" style={{
+            <button onClick={() => signOut({ callbackUrl: "/resepsiyon/login" })} style={{
               display: "flex", alignItems: "center", gap: "7px",
               padding: "7px 14px", borderRadius: "8px",
               border: "1px solid #166534",
@@ -185,7 +187,7 @@ export default function ResepsiyonShell({ children }: { children: React.ReactNod
             }}>
               <i className="pi pi-sign-out" style={{ fontSize: "12px" }} />
               Çıkış Yap
-            </Link>
+            </button>
           </div>
         </header>
 

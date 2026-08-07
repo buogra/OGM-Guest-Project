@@ -6,13 +6,8 @@ export default auth((req) => {
   const isLoggedIn = !!req.auth;
   const { pathname } = req.nextUrl;
 
-  // Resepsiyon login sayfasına giriş yapmış biri gitmeye çalışırsa panele yönlendir
-  if (pathname === "/resepsiyon/login") {
-    if (isLoggedIn) {
-      return NextResponse.redirect(new URL("/oda-yonetimi", req.nextUrl));
-    }
-    return NextResponse.next();
-  }
+  // Resepsiyon login sayfasına giriş yapmış biri gitmeye çalışırsa panele yönlendirme
+  // iptal edildi. Böylece herkes her zaman login sayfasını görebilir.
 
   // Resepsiyon Paneli rotaları koruması
   const protectedPaths = [
@@ -20,6 +15,7 @@ export default auth((req) => {
     "/bekleyen-talepler",
     "/rezervasyon-yonetimi",
     "/kullanici-yonetimi",
+    "/duyuru-yonetimi",
   ];
 
   const isProtected = protectedPaths.some((p) => pathname.startsWith(p));
@@ -40,6 +36,7 @@ export const config = {
     "/bekleyen-talepler/:path*",
     "/rezervasyon-yonetimi/:path*",
     "/kullanici-yonetimi/:path*",
+    "/duyuru-yonetimi/:path*",
     "/resepsiyon/login",
   ],
 };

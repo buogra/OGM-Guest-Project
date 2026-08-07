@@ -106,7 +106,6 @@ export default function KullaniciYonetimi() {
           Kullanıcıları ekle, düzenle, aktif/pasif yap veya sil.
         </p>
       </div>
-      {hata && <p className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{hata}</p>}
 
       {/* Araçlar */}
       <div className="flex flex-wrap items-center gap-3 mb-5">

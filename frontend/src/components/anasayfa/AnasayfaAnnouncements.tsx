@@ -1,11 +1,30 @@
 "use client";
+import { useEffect, useState } from "react";
+
 export default function AnasayfaAnnouncements() {
-  const items = [
+  const [items, setItems] = useState<{tag: string, text: string}[]>([
     { tag: 'Duyuru', text: '2025 yaz sezonu rezervasyonları başladı! Erken rezervasyon indirimi için hemen arayın.' },
     { tag: 'Bilgi', text: 'Yeni aile odaları Haziran 2025 itibarıyla hizmete girmiştir. Kapasite 100 odaya ulaşmıştır.' },
     { tag: 'Etkinlik', text: 'Yaz dönemi doğa yürüyüşleri ve piknik etkinlikleri programı açıklandı.' },
     { tag: 'Güncelleme', text: 'Online rezervasyon sistemi güncellendi. Artık daha kolay rezervasyon yapabilirsiniz.' },
-  ];
+  ]);
+
+  useEffect(() => {
+    fetch("/api/duyurular")
+      .then(res => res.json())
+      .then(data => {
+        if (Array.isArray(data) && data.length > 0) {
+          setItems(data.map((d: any) => ({
+            tag: d.tur || 'Duyuru',
+            text: d.icerik || ''
+          })));
+        } else if (Array.isArray(data) && data.length === 0) {
+           setItems([{ tag: 'Bilgi', text: 'Şu an için aktif bir duyuru bulunmamaktadır.' }]);
+        }
+      })
+      .catch(err => console.error("Duyurular yüklenemedi:", err));
+  }, []);
+
   return (
     <section style={{ background: 'var(--dark)', padding: '70px 0', position: 'relative', overflow: 'hidden' }}>
       <div style={{ maxWidth: '1240px', margin: '0 auto', padding: '0 40px', position: 'relative', zIndex: 1 }}>
