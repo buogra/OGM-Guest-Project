@@ -56,3 +56,4 @@ frontend/.pnpm-debug.log*
 frontend/.vercel
 frontend/*.tsbuildinfo
 frontend/.eslintcache
+rezervasyon_frontend/
