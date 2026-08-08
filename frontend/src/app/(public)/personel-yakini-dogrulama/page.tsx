@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 
 import React, { useState, useRef } from 'react';
 import Link from 'next/link';
@@ -53,8 +54,8 @@ export default function PersonelYakiniPage() {
       <div className="w-[260px] bg-[#163a22] flex flex-col text-white z-20">
         <div className="pt-8">
           <div className="text-center mb-8">
-            <div className="w-[85px] h-[85px] bg-white rounded-full p-1 mx-auto mb-2.5 shadow-[0_4px_10px_rgba(0,0,0,0.15)] flex items-center justify-center">
-              <span className="text-[#163a22] font-bold text-xl">OGM</span>
+            <div className="w-[85px] h-[85px] bg-white rounded-full p-1 mx-auto mb-2.5 shadow-[0_4px_10px_rgba(0,0,0,0.15)] flex items-center justify-center overflow-hidden">
+              <Image src="/ogm.logo.png" alt="OGM Logo" width={75} height={75} className="object-contain" priority />
             </div>
             <h2 className="text-[1.1rem] font-bold tracking-[0.5px]">OGM MİSAFİRHANE</h2>
             <p className="text-[0.8rem] text-[#8bb197] mt-0.5">Rezervasyon Portalı</p>
